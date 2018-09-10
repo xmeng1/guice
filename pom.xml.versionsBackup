@@ -27,7 +27,7 @@ See the Apache License Version 2.0 for the specific language governing permissio
 
   <groupId>com.google.inject</groupId>
   <artifactId>guice-parent</artifactId>
-  <version>4.2.0-servlet-injector</version>
+  <version>4.2.1-SNAPSHOT</version>
 
   <name>Google Guice</name>
 
@@ -447,25 +447,6 @@ See the Apache License Version 2.0 for the specific language governing permissio
   </build>
 
   <profiles>
-      <profile>
-        <id>deepnet-repository</id>
-        <activation>
-          <activeByDefault>true</activeByDefault>
-        </activation>
-        <distributionManagement>
-          <repository>
-            <id>releases</id>
-            <name>Nexus Release Repository</name>
-            <url>http://nexus.deepnetsecurity.local:9000/repository/maven-releases/</url>
-          </repository>
-          <snapshotRepository>
-            <id>snapshots</id>
-            <name>Nexus Snapshot Repository</name>
-            <url>http://nexus.deepnetsecurity.local:9000/repository/maven-snapshots/</url>
-          </snapshotRepository>
-        </distributionManagement>
-      </profile>
-
     <profile>
       <id>jdk8</id>
       <activation>

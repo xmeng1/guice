@@ -6,12 +6,27 @@
   <parent>
     <groupId>com.google.inject.extensions</groupId>
     <artifactId>extensions-parent</artifactId>
-    <version>4.2.0-servlet-injector</version>
+    <version>4.2.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>guice-jndi</artifactId>
+  <artifactId>guice-servlet</artifactId>
 
-  <name>Google Guice - Extensions - JNDI</name>
+  <name>Google Guice - Extensions - Servlet</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.easymock</groupId>
+      <artifactId>easymock</artifactId>
+      <version>3.0</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
@@ -20,7 +35,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Automatic-Module-Name>com.google.guice.extensions.jndi</Automatic-Module-Name>
+              <Automatic-Module-Name>com.google.guice.extensions.servlet</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>

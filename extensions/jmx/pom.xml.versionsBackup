@@ -6,21 +6,28 @@
   <parent>
     <groupId>com.google.inject.extensions</groupId>
     <artifactId>extensions-parent</artifactId>
-    <version>4.2.0-servlet-injector</version>
+    <version>4.2.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>guice-jndi</artifactId>
+  <artifactId>guice-jmx</artifactId>
 
-  <name>Google Guice - Extensions - JNDI</name>
+  <name>Google Guice - Extensions - JMX</name>
 
   <build>
     <plugins>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <skip>true</skip> <!-- Test is not actually a unit test. -->
+        </configuration>
+      </plugin>
+
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
         <configuration>
           <archive>
             <manifestEntries>
-              <Automatic-Module-Name>com.google.guice.extensions.jndi</Automatic-Module-Name>
+              <Automatic-Module-Name>com.google.guice.extensions.jmx</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>

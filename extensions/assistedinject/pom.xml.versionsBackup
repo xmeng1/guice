@@ -6,12 +6,12 @@
   <parent>
     <groupId>com.google.inject.extensions</groupId>
     <artifactId>extensions-parent</artifactId>
-    <version>4.2.0-servlet-injector</version>
+    <version>4.2.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>guice-jndi</artifactId>
+  <artifactId>guice-assistedinject</artifactId>
 
-  <name>Google Guice - Extensions - JNDI</name>
+  <name>Google Guice - Extensions - AssistedInject</name>
 
   <build>
     <plugins>
@@ -20,11 +20,12 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Automatic-Module-Name>com.google.guice.extensions.jndi</Automatic-Module-Name>
+              <Automatic-Module-Name>com.google.guice.extensions.assistedinject</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>
       </plugin>
     </plugins>
   </build>
+
 </project>
