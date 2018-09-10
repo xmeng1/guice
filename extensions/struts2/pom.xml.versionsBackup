@@ -6,14 +6,19 @@
   <parent>
     <groupId>com.google.inject.extensions</groupId>
     <artifactId>extensions-parent</artifactId>
-    <version>4.2.0-servlet-injector</version>
+    <version>4.2.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>guice-servlet</artifactId>
+  <artifactId>guice-struts2</artifactId>
 
-  <name>Google Guice - Extensions - Servlet</name>
+  <name>Google Guice - Extensions - Struts2</name>
 
   <dependencies>
+    <dependency>
+      <groupId>com.google.inject.extensions</groupId>
+      <artifactId>guice-servlet</artifactId>
+      <version>${project.version}</version>
+    </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
@@ -21,10 +26,10 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.easymock</groupId>
-      <artifactId>easymock</artifactId>
-      <version>3.0</version>
-      <scope>test</scope>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-core</artifactId>
+      <version>2.2.1</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 
@@ -35,7 +40,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Automatic-Module-Name>com.google.guice.extensions.servlet</Automatic-Module-Name>
+              <Automatic-Module-Name>com.google.guice.extensions.struts2</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>
